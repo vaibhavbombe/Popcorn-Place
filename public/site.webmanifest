@@ -1,6 +1,6 @@
 {
-    "name": "B📀x-💿ffice🎬",
-    "short_name": "B📀🎬",
+    "name": "POPCORN PLACE",
+    "short_name": "Popcorn🎬",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
+    "theme_color": "#39445a",
+    "background_color": "#39445a",
     "display": "standalone"
 }
