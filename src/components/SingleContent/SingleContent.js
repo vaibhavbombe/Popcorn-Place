@@ -11,9 +11,9 @@ const SingleContent = ({
   media_type,
   vote_average,
 }) => {
-  return ( 
-    <div className="media">
-      <Badge
+  return (
+     <ContentModal media_type={media_type} id={id}>
+       <Badge
        badgeContent={parseFloat(vote_average).toFixed(1)}
        color={vote_average > 6 ? "primary" : "secondary"}
       />
@@ -27,12 +27,8 @@ const SingleContent = ({
         {media_type === "tv" ? "TV Series" : "Movie"}
         <span className="subTitle">{date}</span>
       </span>
-    </div>)
-  // return (
-  //   <ContentModal media_type={media_type} id={id}>
-  //     
-  //   </ContentModal>
-  // );
+    </ContentModal>
+   );
 };
 
 export default SingleContent;
