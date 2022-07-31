@@ -21,19 +21,19 @@ const useStyles = makeStyles({
 export default function SimpleBottomNavigation() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (value === 0) {
-      history.push("/");
+      navigate("/");
     } else if (value === 1) {
-      history.push("/movies");
+      navigate("/movies");
     } else if (value === 2) {
-      history.push("/series");
+      navigate("/series");
     } else if (value === 3) {
-      history.push("/search");
+      navigate("/search");
     }
-  }, [value, history]);
+  }, [value, navigate]);
 
   return (
     <BottomNavigation
