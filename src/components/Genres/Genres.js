@@ -63,8 +63,8 @@ const Genres = ({
         </ThemeProvider>
       ))}
       {genres.map((genre) => (
-        <ThemeProvider theme={darkTheme}>
-          <Chip
+        <ThemeProvider theme={darkTheme} >
+          <Chip 
           style={{ margin: 2 }}
           label={genre.name}
           key={genre.id}
