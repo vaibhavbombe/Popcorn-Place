@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Routes} from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header/Header";
 import SimpleBottomNavigation from "./components/MainNav";
@@ -14,12 +14,12 @@ function App() {
       <Header />
       <div className="app">
         <Container>
-          <Switch>
-            <Route path="/" component={Trending} exact />
-            <Route path="/movies" component={Movies} />
-            <Route path="/series" component={Series} />
-            <Route path="/search" component={Search} />
-          </Switch>
+          <Routes>
+            <Route path="/" element={<Trending/>} exact />
+            <Route path="/movies" element={<Movies/>} />
+            <Route path="/series" element={<Series/>} />
+            <Route path="/search" element={<Search/>} />
+          </Routes>
         </Container>
       </div>
       <SimpleBottomNavigation />
