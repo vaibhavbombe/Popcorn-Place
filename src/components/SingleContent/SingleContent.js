@@ -1,5 +1,5 @@
 import { Badge } from "@material-ui/core";
-import "./SingleContent.css";
+import "./SingleContent.css"
 import { img_300, unavailable } from "../../config/Config";
 import ContentModal from "../ContentModal/ContentModal";
 
@@ -11,12 +11,8 @@ const SingleContent = ({
   media_type,
   vote_average,
 }) => {
-  return (
-    <ContentModal media_type={media_type} id={id}>
-      <Badge
-        badgeContent={vote_average}
-        color={vote_average > 6 ? "primary" : "secondary"}
-      />
+  return ( 
+    <div className="media">
       <img
         className="poster"
         src={poster ? `${img_300}${poster}` : unavailable}
@@ -27,8 +23,15 @@ const SingleContent = ({
         {media_type === "tv" ? "TV Series" : "Movie"}
         <span className="subTitle">{date}</span>
       </span>
-    </ContentModal>
-  );
+    </div>)
+  // return (
+  //   <ContentModal media_type={media_type} id={id}>
+  //     <Badge
+  //       badgeContent={vote_average}
+  //       color={vote_average > 6 ? "primary" : "secondary"}
+  //     />
+  //   </ContentModal>
+  // );
 };
 
 export default SingleContent;
