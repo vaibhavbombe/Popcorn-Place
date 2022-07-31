@@ -1,6 +1,13 @@
 import { Chip } from "@material-ui/core";
 import axios from "axios";
 import { useEffect } from "react";
+import { createTheme, ThemeProvider } from "@material-ui/core";
+
+const darkTheme = createTheme({
+  palette: {
+    type: "dark",
+  },
+});
 
 const Genres = ({
   selectedGenres,
@@ -43,7 +50,8 @@ const Genres = ({
   return (
     <div style={{ padding: "6px 0" }}>
       {selectedGenres.map((genre) => (
-        <Chip
+        <ThemeProvider theme={darkTheme}>
+          <Chip
           style={{ margin: 2 }}
           label={genre.name}
           key={genre.id}
@@ -52,16 +60,20 @@ const Genres = ({
           size="small"
           onDelete={() => handleRemove(genre)}
         />
+        </ThemeProvider>
       ))}
       {genres.map((genre) => (
-        <Chip
+        <ThemeProvider theme={darkTheme}>
+          <Chip
           style={{ margin: 2 }}
           label={genre.name}
           key={genre.id}
           clickable
           size="small"
+          variant="outlined"
           onClick={() => handleAdd(genre)}
         />
+        </ThemeProvider>
       ))}
     </div>
   );
