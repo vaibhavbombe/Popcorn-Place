@@ -85,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
           {content && (
             <div className={classes.paper}>
               <div className="ContentModal">
-                {/* <img
+                <img
                   src={
                     content.poster_path
                       ? `${img_500}/${content.poster_path}`
@@ -93,7 +93,7 @@ const useStyles = makeStyles((theme) => ({
                   }
                   alt={content.name || content.title}
                   className="ContentModal__portrait"
-                /> */}
+                />
                 <img
                   src={
                     content.backdrop_path
@@ -121,9 +121,9 @@ const useStyles = makeStyles((theme) => ({
                     {content.overview}
                   </span>
 
-                  {/* <div>
+                  <div>
                     <Carousel id={id} media_type={media_type} />
-                  </div> */}
+                  </div>
 
                   <Button
                     variant="contained"
