@@ -1,21 +1,13 @@
-// import React from 'react'
-
-// const index = () => {
-//   return (
-//     <div>
-      
-//     </div>
-//   )
-// }
-
-// export default index
-
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
+import { BrowserRouter } from "react-router-dom";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+        
+);
 
-serviceWorkerRegistration.register();

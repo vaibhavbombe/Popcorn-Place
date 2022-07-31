@@ -2,10 +2,10 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header/Header";
 import SimpleBottomNavigation from "./components/MainNav";
-import Movies from "./Pages/Movies/Movies";
-import Series from "./Pages/Series/Series";
-import Trending from "./Pages/Trending/Trending";
-import Search from "./Pages/Search/Search";
+import Movies from "./pages/Movies/Movies"
+import Series from "./pages/Series/Series"
+import Trending from "./pages/Trending/Trending"
+import Search from "./pages/Search/Search"
 import { Container } from "@material-ui/core";
 
 function App() {

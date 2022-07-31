@@ -4,15 +4,11 @@ import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 import axios from "axios";
-import {
-  img_500,
-  unavailable,
-  unavailableLandscape,
-} from "../../config/config";
 import "./ContentModal.css";
 import { Button } from "@material-ui/core";
 import YouTubeIcon from "@material-ui/icons/YouTube";
-import Carousel from "../Carousel/Carousel";
+import Carousel from "./Carousel/Carousel";
+import { img_500, unavailable, unavailableLandscape } from "../../config/Config";
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -32,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function TransitionsModal({ children, media_type, id }) {
+export default function ContentModal({ children, media_type, id }) {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [content, setContent] = useState();
